@@ -3,9 +3,9 @@
 #include <string.h>
 #pragma comment(lib, "Winmm.lib")
 
-#pragma comment(lib, "E:/Users/webrtc_code/webrtc-audioproc/win32/Debug/audio_processing.lib")
-#pragma comment(lib, "E:/Users/webrtc_code/webrtc-audioproc/win32/Debug/common_audio.lib")
-#pragma comment(lib, "E:/Users/webrtc_code/webrtc-audioproc/win32/Debug/system_wrappers.lib")
+#pragma comment(lib, "../Debug/audio_processing.lib")
+#pragma comment(lib, "../Debug/common_audio.lib")
+#pragma comment(lib, "../Debug/system_wrappers.lib")
 
 
 #include "modules/audio_processing/aec/include/echo_cancellation.h"
