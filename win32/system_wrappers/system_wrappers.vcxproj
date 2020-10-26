@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E9B4CD4D-ED25-4459-9BFB-7E587C0563D7}</ProjectGuid>
+    <RootNamespace>system_wrappers</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\system_wrappers\interface;..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\system_wrappers\interface;..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\system_wrappers\source\aligned_malloc.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\atomic32_win.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\condition_variable.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\condition_variable_win.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\cpu.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\cpu_features.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\cpu_info.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\cpu_measurement_harness.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\cpu_win.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\critical_section.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\critical_section_win.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\data_log.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\data_log_c.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\event.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\event_win.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\file_impl.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\map.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\rw_lock.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\rw_lock_generic.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\rw_lock_win.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\sleep.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\thread.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\thread_win.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\trace_impl.cc" />
+    <ClCompile Include="..\..\system_wrappers\source\trace_win.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\system_wrappers\source\condition_variable_win.h" />
+    <ClInclude Include="..\..\system_wrappers\source\cpu_measurement_harness.h" />
+    <ClInclude Include="..\..\system_wrappers\source\cpu_win.h" />
+    <ClInclude Include="..\..\system_wrappers\source\critical_section_win.h" />
+    <ClInclude Include="..\..\system_wrappers\source\event_win.h" />
+    <ClInclude Include="..\..\system_wrappers\source\file_impl.h" />
+    <ClInclude Include="..\..\system_wrappers\source\rw_lock_generic.h" />
+    <ClInclude Include="..\..\system_wrappers\source\rw_lock_win.h" />
+    <ClInclude Include="..\..\system_wrappers\source\set_thread_name_win.h" />
+    <ClInclude Include="..\..\system_wrappers\source\thread_win.h" />
+    <ClInclude Include="..\..\system_wrappers\source\trace_impl.h" />
+    <ClInclude Include="..\..\system_wrappers\source\trace_win.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
